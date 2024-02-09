@@ -1,95 +1,56 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import Link from "next/link";
 
-export default function Home() {
+const imageStyle = {
+  borderRadius: '12px',
+}
+
+export default function Page() {
   return (
     <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+      <section className={styles.presentation}>
+        <Image src="/banniere3.jpg" alt="banniere" width={1000} height={500} priority={false} style={imageStyle} />
+        <div className={styles.name}>
+          <h1>Je suis Samir</h1>
+          <div>I&apos;m a full stack web and mobile developer based in Lille, France. I have a passion for creating scallable, robust and fast applications.</div>
+          <Link href="/">Contactez moi</Link>
         </div>
-      </div>
+      </section>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+      <section className={styles.projects_section}>
+        <h2>Derniers projets</h2>
+        <div className={styles.projects}>
+          <div className={styles.project}>
+            <Image src="/wpc.png" alt="weplaycircular" width={480} height={300} style={imageStyle} />
+            <div>Décathlon - We Play Circular</div>
+            <div>Une application web permettant de louer du matériel sportif.</div>
+          </div>
+          <div className={styles.project}>
+            <Image src="/masteos.png" alt="weplaycircular" width={480} height={300} style={imageStyle} />
+            <div>Masteos</div>
+            <div>Une application web et mobile permettant d&apos;investir dans l&apos;immobilier locatif</div>
+          </div>
+        </div>
 
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
+        <Link className={styles.see_all} href="/">Voir tous les projets</Link>
+      </section>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
+      <section className={styles.skills_section}>
+        <h2>Compétences</h2>
+        <div className={styles.skills}>
+          <div className={styles.skill}>React</div>
+          <div className={styles.skill}>NodeJS</div>
+          <div className={styles.skill}>JavaScript</div>
+          <div className={styles.skill}>TypeScript</div>
+          <div className={styles.skill}>React native</div>
+        </div>
+        <Link className={styles.see_all} href="/">Voir toutes les compétences</Link>
+      </section>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+      <footer>
+        Design par Galileo AI - Développé par Moi
+      </footer>
     </main>
   );
 }

@@ -1,0 +1,16 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+
+    .name {
+        font-weight: 700;
+    }
+    .nav ul{
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
+}
