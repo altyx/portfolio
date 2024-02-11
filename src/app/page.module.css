@@ -14,13 +14,23 @@
   display: flex;
   justify-content: space-between;
   flex-direction: row;
+  gap: 20px;
   & > .project {
     flex: 1;
     flex-shrink: 0;
     width: 50%;
+    & > .title {
+      font-size: 18px;
+      padding: 10px 0;
+      font-weight: 600;
+    }
+    .description {
+      font-size: 14px;
+    }
   }
 }
 .presentation {
+  margin-top: 20px;
   position: relative;
 }
 
@@ -36,7 +46,7 @@
 .name {
   position: absolute;
   top: 12%;
-  color: var(--white);
+  color: var(--background);
   padding: 0 60px;
   font-weight: 700;
 }
@@ -58,4 +68,11 @@
   border-radius: var(--border-radius);
   padding: 8px;
   font-weight: 600;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 20px;
 }

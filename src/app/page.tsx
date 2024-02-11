@@ -4,7 +4,8 @@ import Link from "next/link";
 
 const imageStyle = {
   borderRadius: '12px',
-}
+  width: '100%',
+};
 
 export default function Page() {
   return (
@@ -14,7 +15,6 @@ export default function Page() {
         <div className={styles.name}>
           <h1>Je suis Samir</h1>
           <div>I&apos;m a full stack web and mobile developer based in Lille, France. I have a passion for creating scallable, robust and fast applications.</div>
-          <Link href="/">Contactez moi</Link>
         </div>
       </section>
 
@@ -23,13 +23,13 @@ export default function Page() {
         <div className={styles.projects}>
           <div className={styles.project}>
             <Image src="/wpc.png" alt="weplaycircular" width={480} height={300} style={imageStyle} />
-            <div>Décathlon - We Play Circular</div>
+            <div className={styles.title}>Décathlon - We Play Circular</div>
             <div>Une application web permettant de louer du matériel sportif.</div>
           </div>
           <div className={styles.project}>
             <Image src="/masteos.png" alt="weplaycircular" width={480} height={300} style={imageStyle} />
-            <div>Masteos</div>
-            <div>Une application web et mobile permettant d&apos;investir dans l&apos;immobilier locatif</div>
+            <div className={styles.title}>Masteos</div>
+            <div className={styles.description}>Une application web et mobile permettant d&apos;investir dans l&apos;immobilier locatif</div>
           </div>
         </div>
 
@@ -48,8 +48,9 @@ export default function Page() {
         <Link className={styles.see_all} href="/">Voir toutes les compétences</Link>
       </section>
 
-      <footer>
-        Design par Galileo AI - Développé par Moi
+      <footer className={styles.footer}>
+        <div>Designed by Galileo AI</div>
+        <div>Developped by Samir Moutawakil</div>
       </footer>
     </main>
   );
